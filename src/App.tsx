@@ -9,24 +9,27 @@ import Invitation from "/invitation.jpg";
 const App = () => {
   return (
     <Flex direction={"column"} bg="#ede8e1" overflowY="auto" minHeight="100vh">
-      <Item height="400px" />
+      <Item height="220px" />
       <Item>
-        <Schedule />
+        <Flex maxWidth="400px" width="100%" direction={"column"}>
+          <Image
+            src={Invitation}
+            objectFit={"cover"}
+            rounded="1rem"
+            roundedTopLeft={200}
+            roundedTopRight={200}
+          />
+        </Flex>
       </Item>
-      <Item>
-        <Text
-          fontSize="xx-large"
-          borderTop="1px"
-          fontFamily="GangwonEdu_OTFBoldA"
-        >
+      <Item marginTop={5}>
+        <Text fontSize="xx-large" fontFamily="GangwonEdu_OTFBoldA">
           {bride.name} · {groom.name}
         </Text>
       </Item>
       <Item>
-        <Flex maxWidth="400px" width="100%" direction={"column"}>
-          <Image src={Invitation} objectFit={"cover"} rounded="1rem" />
-        </Flex>
+        <Schedule />
       </Item>
+      <Item height="24px" />
       <Item bg="#fffaf2" padding={5}>
         <Flex direction={"column"} alignItems={"center"}>
           <ItemTitle>초대합니다</ItemTitle>
