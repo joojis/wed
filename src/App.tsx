@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
 import { FiMapPin } from "react-icons/fi";
 
 import "./App.css";
@@ -9,8 +9,16 @@ import Invitation from "/invitation.jpg";
 const App = () => {
   return (
     <Flex direction={"column"} bg="#ede8e1" overflowY="auto" minHeight="100vh">
-      <Item height="220px" />
-      <Item>
+      <Item height="140px" />
+      <Item position="relative">
+        <Flex position="absolute" top="24px">
+          <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png"
+            alt="Love Letter"
+            width="60"
+            height="60"
+          />
+        </Flex>
         <Flex maxWidth="400px" width="100%" direction={"column"}>
           <Image
             src={Invitation}
