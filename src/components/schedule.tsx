@@ -1,5 +1,6 @@
 import { Flex } from "@chakra-ui/react";
+import { schedule } from "../data";
 
 export const Schedule = () => {
-  return <Flex justifyContent={"center"}>8월 25일 일요일 오후 2시</Flex>;
+  return <Flex justifyContent={"center"}>{schedule.detail}</Flex>;
 };

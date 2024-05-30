@@ -51,7 +51,7 @@ const App = () => {
         <ItemTitle>오시는 길</ItemTitle>
       </Item>
       <Item
-        justifyContent={"flex-start"}
+        justifyContent="flex-start"
         bg="#fffaf2"
         padding={3.5}
         fontFamily="Pretendard"
@@ -60,7 +60,7 @@ const App = () => {
           <Icon as={FiMapPin} boxSize="1.6rem" />
           <Box>
             <Text fontSize="large" fontWeight="600">
-              더파티움 여의도 B1 그랜드컨벤션홀
+              {venue.location.addressDetail}
             </Text>
             <Text
               fontSize="large"
@@ -68,7 +68,7 @@ const App = () => {
               color="gray"
               marginTop="1.5"
             >
-              서울 영등포구 은행로 30
+              {venue.location.address}
             </Text>
           </Box>
         </Flex>
