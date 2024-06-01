@@ -1,12 +1,11 @@
-import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react";
 import { FiMapPin } from "react-icons/fi";
 
 import "./App.css";
 import { Host, Schedule, Venue, Item, ItemTitle } from "./components";
 import { bride, groom, venue } from "./data";
-import InvitationW500 from "/invitation_w500.webp";
-import InvitationW900 from "/invitation_w900.webp";
 import { WelcomeMessage } from "./components/welcome-message";
+import { InvitationImage } from "./components/invitation-image";
 
 const App = () => {
   return (
@@ -15,26 +14,8 @@ const App = () => {
       <Item>
         <WelcomeMessage />
       </Item>
-      <Item position="relative">
-        <Flex position="absolute" top="48px">
-          <img
-            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png"
-            alt="Love Letter"
-            width="60"
-            height="60"
-          />
-        </Flex>
-        <Flex maxWidth="400px" width="100%" direction={"column"} padding="1rem">
-          <Image
-            srcSet={`${InvitationW500} 500w, ${InvitationW900} 900w`}
-            sizes="(min-width: 901px) 900px, 500px"
-            src={InvitationW900}
-            objectFit={"cover"}
-            rounded="1rem"
-            roundedTopLeft={200}
-            roundedTopRight={200}
-          />
-        </Flex>
+      <Item>
+        <InvitationImage />
       </Item>
       <Item marginTop={5}>
         <Text fontSize="xx-large" fontFamily="GangwonEdu_OTFBoldA">
