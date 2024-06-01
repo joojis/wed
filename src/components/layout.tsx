@@ -22,8 +22,9 @@ export const ItemTitle = ({ children }: { children: string }) => {
       fontWeight={500}
       color="#ba8f58"
       borderBottom={"1.5px solid #ba8f58"}
-      paddingLeft={3}
-      paddingRight={3}
+      paddingTop="2rem"
+      paddingLeft="1.5rem"
+      paddingRight="1.5rem"
       fontFamily={"Pretendard"}
     >
       {children}
