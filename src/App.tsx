@@ -6,16 +6,14 @@ import { Host, Schedule, Venue, Item, ItemTitle } from "./components";
 import { bride, groom, venue } from "./data";
 import InvitationW500 from "/invitation_w500.webp";
 import InvitationW900 from "/invitation_w900.webp";
-import { HangulTypingEffect } from "./components";
+import { WelcomeMessage } from "./components/welcome-message";
 
 const App = () => {
   return (
     <Flex direction={"column"} bg="#ede8e1" overflowY="auto" minHeight="100vh">
       <Item height="140px" />
       <Item>
-        <Text fontSize="xx-large" fontFamily="GangwonEdu_OTFBoldA">
-          <HangulTypingEffect>Hello, world!</HangulTypingEffect>
-        </Text>
+        <WelcomeMessage />
       </Item>
       <Item position="relative">
         <Flex position="absolute" top="48px">
