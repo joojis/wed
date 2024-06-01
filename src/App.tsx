@@ -97,9 +97,8 @@ const App = () => {
       <Item
         bgColor={"#333"}
         justifyContent={"center"}
-        paddingTop="1.5"
-        paddingBottom="1.5"
-        paddingRight="3.5"
+        paddingTop="1.5rem"
+        paddingBottom="1.5rem"
       >
         <Text
           fontSize="x-large"
