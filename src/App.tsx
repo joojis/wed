@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
 import { FiMapPin } from "react-icons/fi";
 
 import "./App.css";
@@ -93,6 +93,24 @@ const App = () => {
       </Item>
       <Item>
         <Venue {...venue.kakao} />
+      </Item>
+      <Item bg="#fffaf2" padding={8}>
+        <ItemTitle>축의금 전하기</ItemTitle>
+      </Item>
+      <Item
+        bg="#fffaf2"
+        paddingTop={4}
+        paddingBottom={16}
+        fontFamily="Pretendard"
+      >
+        <Flex gap={10} flexFlow={"row"}>
+          <Button onClick={() => alert("준비중이에요.")}>
+            신랑측 계좌번호
+          </Button>
+          <Button onClick={() => alert("준비중이에요.")}>
+            신부측 계좌번호
+          </Button>
+        </Flex>
       </Item>
       <Item flexGrow={9999} minHeight="0rem" />
       <Item
