@@ -14,9 +14,6 @@ export const Venue = ({
       center={{ lat, lng }}
       style={{ width: "640px", height: "400px" }}
       level={4}
-      draggable={false}
-      scrollwheel={false}
-      zoomable={false}
     >
       <MapMarker position={{ lat, lng }}>
         <div style={{ padding: "5px", color: "#000" }}>
