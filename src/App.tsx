@@ -1,8 +1,17 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon } from "@chakra-ui/react";
 import { FiMapPin } from "react-icons/fi";
 
 import "./App.css";
-import { Host, Schedule, Venue, Item, ItemTitle } from "./components";
+import {
+  Host,
+  Schedule,
+  Venue,
+  Item,
+  ItemTitle,
+  AdorableText,
+  PlayfulText,
+  FormalText,
+} from "./components";
 import { bride, groom, venue } from "./data";
 import { WelcomeMessage } from "./components/welcome-message";
 import { InvitationImage } from "./components/invitation-image";
@@ -18,9 +27,9 @@ const App = () => {
         <InvitationImage />
       </Item>
       <Item marginTop={5}>
-        <Text fontSize="xx-large" fontFamily="GangwonEdu_OTFBoldA">
+        <AdorableText fontSize="xx-large">
           {bride.name} · {groom.name}
-        </Text>
+        </AdorableText>
       </Item>
       <Item>
         <Schedule />
@@ -29,19 +38,18 @@ const App = () => {
       <Item bg="#fffaf2" padding={5}>
         <Flex direction={"column"} alignItems={"center"}>
           <ItemTitle>초대합니다</ItemTitle>
-          <Text
+          <AdorableText
             fontSize="large"
             padding="14"
             align="center"
             lineHeight={10}
             wordBreak="keep-all"
-            fontFamily="GangwonEdu_OTFBoldA"
           >
             여름빛 여운이 남은 계절에 저희 두 사람이 소중한 분들을 모시고,
             서로에 대한 사랑과 신뢰로 하나 됨을 약속하려 합니다.
             <br />
             부디 참석하셔서 함께 행복한 시간을 나누었으면 합니다.
-          </Text>
+          </AdorableText>
           <Host>{groom}</Host>
           <Host>{bride}</Host>
         </Flex>
@@ -49,26 +57,21 @@ const App = () => {
       <Item bg="#fffaf2" padding={5}>
         <ItemTitle>오시는 길</ItemTitle>
       </Item>
-      <Item
-        justifyContent="flex-start"
-        bg="#fffaf2"
-        padding={3.5}
-        fontFamily="Pretendard"
-      >
+      <Item justifyContent="flex-start" bg="#fffaf2" padding={3.5}>
         <Flex alignItems="flex-start" gap={2.5}>
           <Icon as={FiMapPin} boxSize="1.6rem" />
           <Box>
-            <Text fontSize="large" fontWeight="600">
+            <FormalText fontSize="large" fontWeight="600">
               {venue.location.addressDetail}
-            </Text>
-            <Text
+            </FormalText>
+            <FormalText
               fontSize="large"
               fontWeight="400"
               color="gray"
               marginTop="1.5"
             >
               {venue.location.address}
-            </Text>
+            </FormalText>
           </Box>
         </Flex>
       </Item>
@@ -78,18 +81,13 @@ const App = () => {
       <Item bg="#fffaf2" padding={8}>
         <ItemTitle>축의금 전하기</ItemTitle>
       </Item>
-      <Item
-        bg="#fffaf2"
-        paddingTop={4}
-        paddingBottom={16}
-        fontFamily="Pretendard"
-      >
+      <Item bg="#fffaf2" paddingTop={4} paddingBottom={16}>
         <Flex gap={10} flexFlow={"row"}>
           <Button onClick={() => alert("준비중이에요.")}>
-            신랑측 계좌번호
+            <FormalText>신랑측 계좌번호</FormalText>
           </Button>
           <Button onClick={() => alert("준비중이에요.")}>
-            신부측 계좌번호
+            <FormalText>신부측 계좌번호</FormalText>
           </Button>
         </Flex>
       </Item>
@@ -100,13 +98,9 @@ const App = () => {
         paddingTop="1.5rem"
         paddingBottom="1.5rem"
       >
-        <Text
-          fontSize="x-large"
-          color="#818181"
-          fontFamily={"Ownglyph_meetme-Rg"}
-        >
+        <PlayfulText fontSize="x-large" color="#818181">
           이 청첩장은 신랑이 직접 만들었어요!
-        </Text>
+        </PlayfulText>
       </Item>
     </Flex>
   );

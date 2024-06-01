@@ -1,6 +1,6 @@
-import { Text } from "@chakra-ui/react";
-import { HangulTypingEffect } from "./hangul-typing-effect";
 import { useState } from "react";
+import { HangulTypingEffect } from "./hangul-typing-effect";
+import { AdorableText } from "./texts";
 
 export const WelcomeMessage = () => {
   const [sequence, setSequence] = useState(0);
@@ -14,10 +14,10 @@ export const WelcomeMessage = () => {
     "결혼식에 초대합니다 ~~~ ",
   ];
   return (
-    <Text fontSize="xx-large" fontFamily="GangwonEdu_OTFBoldA">
+    <AdorableText fontSize="xx-large">
       <HangulTypingEffect onRewindComplete={() => setSequence(sequence + 1)}>
         {messages[sequence % messages.length]}
       </HangulTypingEffect>
-    </Text>
+    </AdorableText>
   );
 };

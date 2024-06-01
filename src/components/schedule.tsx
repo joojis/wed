@@ -1,5 +1,7 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+
 import { schedule, venue } from "../data";
+import { AdorableText } from "./texts";
 
 export const Schedule = () => {
   return (
@@ -10,12 +12,10 @@ export const Schedule = () => {
       gap={1.5}
       marginTop={5}
     >
-      <Text fontSize="x-large" fontFamily="GangwonEdu_OTFBoldA">
-        {schedule.detail}
-      </Text>
-      <Text fontSize="large" fontFamily="GangwonEdu_OTFBoldA">
+      <AdorableText fontSize="x-large">{schedule.detail}</AdorableText>
+      <AdorableText fontSize="large">
         {venue.location.addressDetail}
-      </Text>
+      </AdorableText>
     </Flex>
   );
 };

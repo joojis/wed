@@ -1,5 +1,6 @@
-import { Flex, FlexProps, Text } from "@chakra-ui/react";
+import { Flex, FlexProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { FormalText } from "./texts";
 
 export const Item = ({
   children,
@@ -17,7 +18,7 @@ export const Item = ({
 
 export const ItemTitle = ({ children }: { children: string }) => {
   return (
-    <Text
+    <FormalText
       fontSize="x-large"
       fontWeight={500}
       color="#ba8f58"
@@ -25,9 +26,8 @@ export const ItemTitle = ({ children }: { children: string }) => {
       paddingTop="2rem"
       paddingLeft="1.5rem"
       paddingRight="1.5rem"
-      fontFamily={"Pretendard"}
     >
       {children}
-    </Text>
+    </FormalText>
   );
 };
