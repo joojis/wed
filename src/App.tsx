@@ -18,7 +18,7 @@ const App = () => {
         </Text>
       </Item>
       <Item position="relative">
-        <Flex position="absolute" top="24px">
+        <Flex position="absolute" top="48px">
           <img
             src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png"
             alt="Love Letter"
