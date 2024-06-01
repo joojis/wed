@@ -1,4 +1,5 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/image";
 
 import InvitationW500 from "/invitation_w500.webp";
 import InvitationW900 from "/invitation_w900.webp";

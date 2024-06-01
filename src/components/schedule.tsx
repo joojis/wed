@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/layout";
 
 import { schedule, venue } from "../data";
 import { AdorableText } from "./texts";

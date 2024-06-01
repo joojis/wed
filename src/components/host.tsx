@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/layout";
 
 import type { Character } from "../data";
 import { RespectfulText } from "./texts";

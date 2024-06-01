@@ -1,4 +1,4 @@
-import { Flex, FlexProps } from "@chakra-ui/react";
+import { Flex, FlexProps } from "@chakra-ui/layout";
 import { ReactNode } from "react";
 import { FormalText } from "./texts";
 

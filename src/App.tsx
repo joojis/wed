@@ -1,4 +1,6 @@
-import { Box, Button, Flex, Icon } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/button";
+import { Icon } from "@chakra-ui/icon";
 import { FiMapPin } from "react-icons/fi";
 
 import "./App.css";
@@ -40,9 +42,9 @@ const App = () => {
           <ItemTitle>초대합니다</ItemTitle>
           <AdorableText
             fontSize="large"
-            padding="14"
+            padding="4rem"
             align="center"
-            lineHeight={10}
+            lineHeight="2.5rem"
             wordBreak="keep-all"
           >
             여름빛 여운이 남은 계절에 저희 두 사람이 소중한 분들을 모시고,
