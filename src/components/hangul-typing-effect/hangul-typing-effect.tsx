@@ -4,10 +4,10 @@ import { useFrames } from "./use-frames";
 
 type Callback = () => void;
 
-const forwardTypingInterval = 120; // Milliseconds
+const forwardTypingInterval = 70; // Milliseconds
 const forwardCompleteInterval = 2000; // Milliseconds
-const rewindTypingInterval = 40; // Milliseconds
-const rewindCompleteInterval = 500; // Milliseconds
+const rewindTypingInterval = 30; // Milliseconds
+const rewindCompleteInterval = 250; // Milliseconds
 
 export const HangulTypingEffect = ({
   children,
@@ -32,7 +32,7 @@ export const HangulTypingEffect = ({
           const nextFrameLastCharactor = nextFrame[nextFrame.length - 1];
           timeoutId = setTimeout(
             next,
-            nextFrameLastCharactor === " " ? 240 : forwardTypingInterval
+            nextFrameLastCharactor === " " ? 100 : forwardTypingInterval
           );
         } else {
           timeoutId = setTimeout(() => {
