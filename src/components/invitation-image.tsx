@@ -2,17 +2,13 @@ import { Flex, Image } from "@chakra-ui/react";
 
 import InvitationW500 from "/invitation_w500.webp";
 import InvitationW900 from "/invitation_w900.webp";
+import LoveLetter from "/love-letter.webp";
 
 export const InvitationImage = () => {
   return (
     <Flex position="relative" justifyContent="center">
       <Flex position="absolute" top="48px">
-        <img
-          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png"
-          alt="Love Letter"
-          width="60"
-          height="60"
-        />
+        <img src={LoveLetter} alt="Love Letter" width="60" height="60" />
       </Flex>
       <Flex maxWidth="400px" width="100%" direction={"column"} padding="1rem">
         <Image
