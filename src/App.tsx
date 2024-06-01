@@ -4,7 +4,8 @@ import { FiMapPin } from "react-icons/fi";
 import "./App.css";
 import { Host, Schedule, Venue, Item, ItemTitle } from "./components";
 import { bride, groom, venue } from "./data";
-import Invitation from "/invitation.jpg";
+import InvitationW500 from "/invitation_w500.webp";
+import InvitationW900 from "/invitation_w900.webp";
 
 const App = () => {
   return (
@@ -19,9 +20,11 @@ const App = () => {
             height="60"
           />
         </Flex>
-        <Flex maxWidth="400px" width="100%" direction={"column"}>
+        <Flex maxWidth="400px" width="100%" direction={"column"} padding="1rem">
           <Image
-            src={Invitation}
+            srcSet={`${InvitationW500} 500w, ${InvitationW900} 900w`}
+            sizes="(min-width: 901px) 900px, 500px"
+            src={InvitationW900}
             objectFit={"cover"}
             rounded="1rem"
             roundedTopLeft={200}
