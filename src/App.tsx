@@ -1,21 +1,24 @@
 import { Button } from "@chakra-ui/button";
 import { Flex } from "@chakra-ui/layout";
-
-import "./App.css";
 import {
   AdorableText,
   FormalText,
   Host,
   Item,
   ItemTitle,
+  Parking,
   PlayfulText,
   Schedule,
+  ShuttleBus,
+  Subway,
   Venue,
   VenueAddress,
 } from "./components";
 import { InvitationImage } from "./components/invitation-image";
 import { WelcomeMessage } from "./components/welcome-message";
 import { bride, groom, venue } from "./data";
+
+import "./App.css";
 
 const App = () => {
   return (
@@ -64,6 +67,14 @@ const App = () => {
       <Item>
         <Venue {...venue.kakao} />
       </Item>
+      <Item justifyContent="flex-start" bg="#fffaf2" padding={3.5}>
+        <Flex direction="column" gap={1.5}>
+          <Parking />
+          <ShuttleBus />
+          <Subway />
+        </Flex>
+      </Item>
+      <Item justifyContent="flex-start" bg="#fffaf2"></Item>
       <Item bg="#fffaf2" padding={8}>
         <ItemTitle>축의금 전하기</ItemTitle>
       </Item>
