@@ -1,9 +1,8 @@
-import { Button } from "@chakra-ui/button";
 import { Flex } from "@chakra-ui/layout";
 import {
   AdorableText,
   DownloadRoughMap,
-  FormalText,
+  GiftModalButton,
   Host,
   Item,
   ItemTitle,
@@ -78,16 +77,25 @@ const App = () => {
       </Item>
       <Item justifyContent="flex-start" bg="#fffaf2"></Item>
       <Item bg="#fffaf2" padding={8}>
-        <ItemTitle>축의금 전하기</ItemTitle>
+        <ItemTitle>축의금 · 선물 전하기</ItemTitle>
       </Item>
       <Item bg="#fffaf2" paddingTop={4} paddingBottom={16}>
-        <Flex gap={10} flexFlow={"row"}>
-          <Button onClick={() => alert("준비중이에요.")}>
-            <FormalText>신랑측 계좌번호</FormalText>
-          </Button>
-          <Button onClick={() => alert("준비중이에요.")}>
-            <FormalText>신부측 계좌번호</FormalText>
-          </Button>
+        <Flex gap="2rem" flexFlow="row" flexWrap="wrap" justifyContent="center">
+          <GiftModalButton
+            bankAccounts={[
+              {
+                bankName: "케이뱅크",
+                accountHolder: "정진경",
+                accountNumber: "100-139-397956",
+              },
+            ]}
+            wishlistUrl="https://kko.to/VC9lZmjBCK"
+          >
+            신랑측 계좌번호 · 위시리스트
+          </GiftModalButton>
+          <GiftModalButton bankAccounts={[]}>
+            신부측 계좌번호 · 위시리스트
+          </GiftModalButton>
         </Flex>
       </Item>
       <Item flexGrow={9999} minHeight="0rem" />
