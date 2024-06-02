@@ -1,22 +1,21 @@
-import { Box, Flex } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
-import { Icon } from "@chakra-ui/icon";
-import { FiMapPin } from "react-icons/fi";
+import { Flex } from "@chakra-ui/layout";
 
 import "./App.css";
 import {
+  AdorableText,
+  FormalText,
   Host,
-  Schedule,
-  Venue,
   Item,
   ItemTitle,
-  AdorableText,
   PlayfulText,
-  FormalText,
+  Schedule,
+  Venue,
+  VenueAddress,
 } from "./components";
-import { bride, groom, venue } from "./data";
-import { WelcomeMessage } from "./components/welcome-message";
 import { InvitationImage } from "./components/invitation-image";
+import { WelcomeMessage } from "./components/welcome-message";
+import { bride, groom, venue } from "./data";
 
 const App = () => {
   return (
@@ -60,22 +59,7 @@ const App = () => {
         <ItemTitle>오시는 길</ItemTitle>
       </Item>
       <Item justifyContent="flex-start" bg="#fffaf2" padding={3.5}>
-        <Flex alignItems="flex-start" gap={2.5}>
-          <Icon as={FiMapPin} boxSize="1.6rem" />
-          <Box>
-            <FormalText fontSize="large" fontWeight="600">
-              {venue.location.addressDetail}
-            </FormalText>
-            <FormalText
-              fontSize="large"
-              fontWeight="400"
-              color="gray"
-              marginTop="1.5"
-            >
-              {venue.location.address}
-            </FormalText>
-          </Box>
-        </Flex>
+        <VenueAddress />
       </Item>
       <Item>
         <Venue {...venue.kakao} />
