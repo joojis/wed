@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/button";
 import { Flex } from "@chakra-ui/layout";
 import {
   AdorableText,
+  DownloadRoughMap,
   FormalText,
   Host,
   Item,
@@ -72,6 +73,7 @@ const App = () => {
           <Parking />
           <ShuttleBus />
           <Subway />
+          <DownloadRoughMap />
         </Flex>
       </Item>
       <Item justifyContent="flex-start" bg="#fffaf2"></Item>
