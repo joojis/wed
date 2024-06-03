@@ -22,7 +22,8 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
-    "react-kakao-maps-sdk": "^1.1.26"
+    "react-kakao-maps-sdk": "^1.1.26",
+    "react-photo-album": "^2.4.0"
   },
   "devDependencies": {
     "@types/babel__generator": "^7.6.8",
