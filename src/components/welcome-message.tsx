@@ -14,7 +14,7 @@ export const WelcomeMessage = () => {
     "결혼식에 초대합니다 ~~~ ",
   ];
   return (
-    <AdorableText fontSize="xx-large">
+    <AdorableText fontSize="xx-large" lineHeight="3.5rem">
       <HangulTypingEffect onRewindComplete={() => setSequence(sequence + 1)}>
         {messages[sequence % messages.length]}
       </HangulTypingEffect>

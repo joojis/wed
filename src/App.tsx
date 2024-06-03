@@ -23,9 +23,15 @@ import "./App.css";
 
 const App = () => {
   return (
-    <Flex direction={"column"} bg="#ede8e1" overflowY="auto" minHeight="100vh">
-      <Item height="140px" />
-      <Item>
+    <Flex direction={"column"} bg="#ede8e1" overflowY="auto" height="100vh">
+      <Item minHeight="140px" />
+      <Item
+        position="sticky"
+        zIndex={15}
+        bg="#ede8e1ee"
+        top={0}
+        paddingTop="0.25rem"
+      >
         <WelcomeMessage />
       </Item>
       <Item>
@@ -39,7 +45,7 @@ const App = () => {
       <Item>
         <Schedule />
       </Item>
-      <Item height="24px" />
+      <Item minHeight="24px" />
       <Item bg="#fffaf2" padding="2rem 0">
         <Flex direction={"column"} alignItems={"center"}>
           <ItemTitle>초대합니다</ItemTitle>
