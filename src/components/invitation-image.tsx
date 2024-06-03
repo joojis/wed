@@ -21,6 +21,7 @@ export const InvitationImage = () => {
           rounded="1rem"
           roundedTopLeft={200}
           roundedTopRight={200}
+          boxShadow="0 1px 5px #917f58"
         />
       </Flex>
     </Flex>
