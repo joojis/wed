@@ -16,6 +16,7 @@ export const InvitationImage = () => {
           srcSet={`${InvitationW500} 500w, ${InvitationW900} 900w`}
           sizes="(min-width: 901px) 900px, 500px"
           src={InvitationW900}
+          alt="We invite you"
           objectFit={"cover"}
           rounded="1rem"
           roundedTopLeft={200}
