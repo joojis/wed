@@ -7,6 +7,7 @@ import {
   Item,
   ItemTitle,
   Parking,
+  Photos,
   PlayfulText,
   Schedule,
   ShuttleBus,
@@ -75,11 +76,16 @@ const App = () => {
           <DownloadRoughMap />
         </Flex>
       </Item>
-      <Item justifyContent="flex-start" bg="#fffaf2"></Item>
-      <Item bg="#fffaf2" padding={8}>
+      <Item bg="#fffaf2" padding="4rem">
+        <ItemTitle>사진 구경하기</ItemTitle>
+      </Item>
+      <Item>
+        <Photos />
+      </Item>
+      <Item bg="#fffaf2" padding="6rem">
         <ItemTitle>축의금 · 선물 전하기</ItemTitle>
       </Item>
-      <Item bg="#fffaf2" paddingTop={4} paddingBottom={16}>
+      <Item bg="#fffaf2" paddingBottom="8rem">
         <Flex gap="2rem" flexFlow="row" flexWrap="wrap" justifyContent="center">
           <GiftModalButton
             bankAccounts={groom.bankAccounts}

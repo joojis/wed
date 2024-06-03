@@ -10,3 +10,4 @@ export * from "./subway";
 export * from "./texts";
 export * from "./venue";
 export * from "./venue-address";
+export * from "./photos";
