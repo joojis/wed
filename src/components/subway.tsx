@@ -12,7 +12,7 @@ export const Subway = () => {
           fontSize="large"
           fontWeight="600"
           display="inline"
-          color="#aa9872"
+          color="#917f58"
         >
           9호선 국회의사당
         </FormalText>

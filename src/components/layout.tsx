@@ -21,8 +21,8 @@ export const ItemTitle = ({ children }: { children: string }) => {
     <FormalText
       fontSize="x-large"
       fontWeight={500}
-      color="#ba8f58"
-      borderBottom={"1.5px solid #ba8f58"}
+      color="#9e7541"
+      borderBottom={"1.5px solid #9e7541"}
       paddingTop="2rem"
       paddingLeft="1.5rem"
       paddingRight="1.5rem"

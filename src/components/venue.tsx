@@ -19,7 +19,7 @@ const MapItem = ({ children, href }: { children: ReactNode; href: string }) => {
         padding="0.25rem 1rem"
         rounded="2rem"
         boxShadow="0 3px 5px"
-        color="#ba8f58"
+        color="#9e7541"
       >
         <b>{children}</b>
         <Icon as={FiExternalLink} boxSize="1.2rem" />
@@ -59,7 +59,7 @@ export const Venue = ({
               textAlign: "center",
               width: "200px",
               padding: "3px",
-              color: "#ba8f58",
+              color: "#9e7541",
             }}
           >
             <b>
