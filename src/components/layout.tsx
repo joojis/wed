@@ -24,8 +24,8 @@ export const ItemTitle = ({ children }: { children: string }) => {
       color="#9e7541"
       borderBottom={"1.5px solid #9e7541"}
       paddingTop="2rem"
-      paddingLeft="1.5rem"
-      paddingRight="1.5rem"
+      paddingLeft="0.5rem"
+      paddingRight="0.5rem"
     >
       {children}
     </FormalText>

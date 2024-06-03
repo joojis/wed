@@ -40,7 +40,7 @@ const App = () => {
         <Schedule />
       </Item>
       <Item height="24px" />
-      <Item bg="#fffaf2" padding={5}>
+      <Item bg="#fffaf2" padding="2rem 0">
         <Flex direction={"column"} alignItems={"center"}>
           <ItemTitle>초대합니다</ItemTitle>
           <AdorableText
@@ -59,7 +59,7 @@ const App = () => {
           <Host>{bride}</Host>
         </Flex>
       </Item>
-      <Item bg="#fffaf2" padding={5}>
+      <Item bg="#fffaf2" padding="2rem 0">
         <ItemTitle>오시는 길</ItemTitle>
       </Item>
       <Item justifyContent="flex-start" bg="#fffaf2" padding={3.5}>
@@ -76,13 +76,13 @@ const App = () => {
           <DownloadRoughMap />
         </Flex>
       </Item>
-      <Item bg="#fffaf2" padding="4rem">
+      <Item bg="#fffaf2" padding="4rem 0">
         <ItemTitle>사진 구경하기</ItemTitle>
       </Item>
       <Item>
         <Photos />
       </Item>
-      <Item bg="#fffaf2" padding="6rem">
+      <Item bg="#fffaf2" padding="6rem 0">
         <ItemTitle>축의금 · 선물 전하기</ItemTitle>
       </Item>
       <Item bg="#fffaf2" paddingBottom="8rem">
