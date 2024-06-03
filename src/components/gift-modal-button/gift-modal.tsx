@@ -35,7 +35,7 @@ export const GiftModal = ({
         </ModalHeader>
         <ModalBody paddingBottom="2rem">
           {bankAccounts.length === 0 && "준비중이에요!"}
-          <Flex direction="column">
+          <Flex direction="column" gap="1.5rem">
             {bankAccounts.map(({ accountHolder, bankName, accountNumber }) => (
               <Flex
                 key={bankName + accountNumber}

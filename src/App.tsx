@@ -82,18 +82,12 @@ const App = () => {
       <Item bg="#fffaf2" paddingTop={4} paddingBottom={16}>
         <Flex gap="2rem" flexFlow="row" flexWrap="wrap" justifyContent="center">
           <GiftModalButton
-            bankAccounts={[
-              {
-                bankName: "케이뱅크",
-                accountHolder: "정진경",
-                accountNumber: "100-139-397956",
-              },
-            ]}
-            wishlistUrl="https://kko.to/VC9lZmjBCK"
+            bankAccounts={groom.bankAccounts}
+            wishlistUrl={groom.wishlistUrl}
           >
             신랑측 계좌번호 · 위시리스트
           </GiftModalButton>
-          <GiftModalButton bankAccounts={[]}>
+          <GiftModalButton bankAccounts={bride.bankAccounts}>
             신부측 계좌번호 · 위시리스트
           </GiftModalButton>
         </Flex>
