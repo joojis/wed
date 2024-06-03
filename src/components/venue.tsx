@@ -1,9 +1,13 @@
 import { Icon } from "@chakra-ui/icon";
 import { Flex } from "@chakra-ui/layout";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { FiExternalLink } from "react-icons/fi";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
+
+const size = { maxWidth: "100vw", width: "640px", height: "400px" };
+
+const Placeholder = () => <Flex {...size} />;
 
 const MapItem = ({ children, href }: { children: ReactNode; href: string }) => {
   return (
@@ -23,6 +27,7 @@ const MapItem = ({ children, href }: { children: ReactNode; href: string }) => {
     </a>
   );
 };
+
 export const Venue = ({
   lat,
   lng,
@@ -32,13 +37,22 @@ export const Venue = ({
   lng: number;
   placeId: string;
 }) => {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${
+      import.meta.env.VITE_KAKAO_MAPS_SDK_KEY
+    }&autoload=false`;
+    script.async = true;
+    document.head.appendChild(script);
+    script.onload = () => setReady(true);
+  }, []);
+  if (!ready) {
+    return <Placeholder />;
+  }
   return (
-    <Flex position="relative">
-      <Map
-        center={{ lat, lng }}
-        style={{ maxWidth: "100vw", width: "640px", height: "400px" }}
-        level={4}
-      >
+    <Flex position="relative" maxWidth="100vw">
+      <Map center={{ lat, lng }} style={size} level={4}>
         <MapMarker position={{ lat, lng }}>
           <div
             style={{
