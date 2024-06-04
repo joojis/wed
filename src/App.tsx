@@ -99,7 +99,10 @@ const App = () => {
           >
             신랑측 계좌번호 · 위시리스트
           </GiftModalButton>
-          <GiftModalButton bankAccounts={bride.bankAccounts}>
+          <GiftModalButton
+            bankAccounts={bride.bankAccounts}
+            wishlistUrl={bride.wishlistUrl}
+          >
             신부측 계좌번호 · 위시리스트
           </GiftModalButton>
         </Flex>
