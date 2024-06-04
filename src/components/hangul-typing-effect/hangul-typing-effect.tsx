@@ -4,19 +4,32 @@ import { useFrames } from "./use-frames";
 
 type Callback = () => void;
 
-const forwardTypingInterval = 70; // Milliseconds
-const forwardCompleteInterval = 2000; // Milliseconds
-const rewindTypingInterval = 30; // Milliseconds
+const forwardTypingInterval = 140; // Milliseconds
+// const forwardCompleteInterval = 2000; // Milliseconds
+const rewindTypingInterval = 50; // Milliseconds
 const rewindCompleteInterval = 250; // Milliseconds
+
+const getForwardTypingInterval = (char: string) => {
+  switch (char) {
+    case " ":
+      return 100;
+    case "~":
+      return 750;
+    default:
+      return forwardTypingInterval;
+  }
+};
 
 export const HangulTypingEffect = ({
   children,
   onForwardComplete,
   onRewindComplete,
+  forwardCompleteInterval,
 }: {
   children: string;
   onForwardComplete?: Callback;
   onRewindComplete?: Callback;
+  forwardCompleteInterval: number;
 }) => {
   const frames = useFrames(children);
   const [frameCount, next, prev, hasNext, hasPrev] = useFrameCounter(0, frames);
@@ -32,7 +45,7 @@ export const HangulTypingEffect = ({
           const nextFrameLastCharactor = nextFrame[nextFrame.length - 1];
           timeoutId = setTimeout(
             next,
-            nextFrameLastCharactor === " " ? 100 : forwardTypingInterval
+            getForwardTypingInterval(nextFrameLastCharactor)
           );
         } else {
           timeoutId = setTimeout(() => {

@@ -13,9 +13,14 @@ export const WelcomeMessage = () => {
     "그랜드컨벤션홀",
     "결혼식에 초대합니다 ~~~ ",
   ];
+  const isLastMessageSequence =
+    sequence % messages.length === messages.length - 1;
   return (
     <AdorableText fontSize="xx-large" lineHeight="3.5rem">
-      <HangulTypingEffect onRewindComplete={() => setSequence(sequence + 1)}>
+      <HangulTypingEffect
+        onRewindComplete={() => setSequence(sequence + 1)}
+        forwardCompleteInterval={isLastMessageSequence ? 7000 : 2500}
+      >
         {messages[sequence % messages.length]}
       </HangulTypingEffect>
     </AdorableText>
