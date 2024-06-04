@@ -1,6 +1,16 @@
 import { useState } from "react";
 import { HangulTypingEffect } from "./hangul-typing-effect";
 import { AdorableText } from "./texts";
+import { Text, Flex, TextProps } from "@chakra-ui/layout";
+
+const TextPlaceholder = (props: TextProps) => (
+  <Text
+    color="#00000000"
+    // 타이핑 효과 중간에 자간이 폭을 초과해 text-reflow 발생하는 것 방지하기 위한 공간 확보
+    marginRight="0.5rem"
+    {...props}
+  />
+);
 
 export const WelcomeMessage = () => {
   const [sequence, setSequence] = useState(0);
@@ -17,12 +27,21 @@ export const WelcomeMessage = () => {
     sequence % messages.length === messages.length - 1;
   return (
     <AdorableText fontSize="xx-large" lineHeight="3.5rem">
-      <HangulTypingEffect
-        onRewindComplete={() => setSequence(sequence + 1)}
-        forwardCompleteInterval={isLastMessageSequence ? 7000 : 2500}
-      >
-        {messages[sequence % messages.length]}
-      </HangulTypingEffect>
+      <Flex position="relative">
+        <Flex>
+          <TextPlaceholder>
+            {messages[sequence % messages.length]}
+          </TextPlaceholder>
+        </Flex>
+        <Flex position="absolute" justify="center">
+          <HangulTypingEffect
+            onRewindComplete={() => setSequence(sequence + 1)}
+            forwardCompleteInterval={isLastMessageSequence ? 7000 : 2500}
+          >
+            {messages[sequence % messages.length]}
+          </HangulTypingEffect>
+        </Flex>
+      </Flex>
     </AdorableText>
   );
 };
